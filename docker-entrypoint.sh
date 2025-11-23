@@ -1,5 +1,5 @@
 #!/bin/sh
 
-chown -R node:node /home/node/.n8n || true
+chown -R node:node /home/node/.n8n 2>/dev/null || true
 
-exec n8n
+exec su node -c "n8n"
